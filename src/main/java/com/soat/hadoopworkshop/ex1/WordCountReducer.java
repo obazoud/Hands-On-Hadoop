@@ -14,6 +14,11 @@ public class WordCountReducer extends
 			throws IOException, InterruptedException {
 
 		// Utiliser context.write(text, int) pour ecrire la sortie du reducer;
+        int sum = 0;
+        for (IntWritable value : values) {
+            sum += value.get();
+        }
+        context.write(key, new IntWritable(sum));
 	}
 
 }

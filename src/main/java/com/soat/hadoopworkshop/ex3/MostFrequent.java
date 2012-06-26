@@ -25,6 +25,6 @@ public class MostFrequent implements HadoopWorkshopConfig {
 		job.setMapperClass(MostFrequentMapper.class);
 		job.setReducerClass(MostFrequentReducer.class);
 		job.setOutputKeyClass(Text.class);
-		job.setOutputValueClass(IntWritable.class);
+		job.setOutputValueClass(Text.class);
 	}
 }
